@@ -1,19 +1,43 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-container>
+      <b-row>
+        <b-col cols="12">
+          <Header />
+        </b-col>
+      </b-row>
+
+      <b-row>
+        <b-col cols="3">
+          <CategoriesMenu />
+        </b-col>
+        <b-col cols="9">
+          <router-view></router-view>
+        </b-col>
+      </b-row>
+
+      <b-row>
+        <b-col cols="12">
+          <Footer />
+        </b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Header from "./components/Header.vue";
+import CategoriesMenu from "./components/CategoriesMenu.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
+    Header,
+    CategoriesMenu,
+    Footer
   }
-}
+};
 </script>
 
 <style>
