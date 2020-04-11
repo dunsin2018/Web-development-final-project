@@ -8,7 +8,7 @@
       >{{category.title}}</b-nav-item>
     </b-nav>
   </div>
-</template>ß
+</template>
 
 <script>
 import axios from "axios";
@@ -20,7 +20,7 @@ export default {
     };
   },
   mounted() {
-    axios.get("euas.person.ee/categories").then(response => {
+    axios.get("https://euas.person.ee/categories").then(response => {
       this.categories = response.data;
     });
   }
